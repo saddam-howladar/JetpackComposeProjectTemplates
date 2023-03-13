@@ -10,12 +10,37 @@ composeNavigation = "2.5.3"
 coreKtx = "1.9.0"
 coreSplashScreen = "1.0.0"
 
+#desugar
+desugarJdkLibs = "2.0.2"
+
 #androidTest
 junit = "4.13.2"
 junitExtTest = "1.1.5"
 
+#google
+playServicesAuth = "20.4.1"
+
+#jetbrains
+coroutine = "1.6.4"
+
+#realm
+realm = "1.6.0"
+
+#koin
+koinCore = "3.3.3"
+koinAndroid = "3.3.3"
+koinCompose = "3.4.2"
+
+#coil
+coil = "2.2.2"
+
+#stevdza-chan
+oneTapCompose = "1.0.0"
+messageBarCompose = "1.0.5"
+
 #plugins
-androidGradlePlugins = "7.4.2"
+androidGradlePlugin = "7.4.2"
+secretaGradlePlugin = "2.0.1"
 kotlin = "1.8.10"
 
 [libraries]
@@ -58,10 +83,37 @@ compose-ui-test-manifest = {module = "androidx.compose.ui:ui-test-manifest"}#deb
 core-ktx ={module = "androidx.core:core-ktx",version.ref = "coreKtx"}
 core-splashscreen ={module = "androidx.core:core-splashscreen",version.ref = "coreSplashScreen"}
 
+#Desugar
+desugar-jdk-libs = {module = "com.android.tools:desugar_jdk_libs",version.ref = "desugarJdkLibs"}
+
 #androidTest
 junit = {module = "junit:junit",version.ref = "junit"}#test
 junit-ext-test = {module = "androidx.test.ext:junit",version.ref = "junitExtTest"}#androidTest
 
+#google
+play-services-auth = {module = "com.google.android.gms:play-services-auth",version.ref = "playServicesAuth"}
+
+#jetbrains
+kotlinx-coroutines-core = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-core",version.ref = "coroutine"}
+kotlinx-coroutines-android = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-android",version.ref = "coroutine"}
+kotlinx-coroutines-play-services = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services",version.ref = "coroutine"}
+
+#realm
+realm-base = {module = "io.realm.kotlin:library-base",version.ref = "realm"}
+realm-sync = {module = "io.realm.kotlin:library-sync",version.ref = "realm"}
+
+#koin
+koin-core = {module = "io.insert-koin:koin-core",version.ref = "koinCore"}
+koin-android = {module = "io.insert-koin:koin-android",version.ref = "koinAndroid"}
+koin-compose = {module = "io.insert-koin:koin-androidx-compose",version.ref = "koinCompose"}
+
+#coil
+
+coil-compose = {module = "io.coil-kt:coil-compose",version.ref = "coil"}
+
+#stevdza-chan
+stevdzachan-onetapcompose = {module = "com.github.stevdza-san:OneTapCompose",version.ref = "oneTapCompose"}
+stevdzachan-messagebarcompose = {module = "com.github.stevdza-san:MessageBarCompose",version.ref = "messageBarCompose"}
 [bundles]
 composeStdLib = ["compose-animation","compose-animation-core","compose-animation-graphics",
     "compose-foundation","compose-foundation-layout","compose-material-icons-core",
@@ -74,6 +126,8 @@ composeIntegrationLib = ["compose-activity","compose-navigation","compose-viewmo
 
 
 [plugins]
-android-application = {id = "com.android.application",version.ref = "androidGradlePlugins"}
-android-library = {id = "com.android.library",version.ref = "androidGradlePlugins"}
+android-application = {id = "com.android.application",version.ref = "androidGradlePlugin"}
+android-library = {id = "com.android.library",version.ref = "androidGradlePlugin"}
 kotlin-android = {id = "org.jetbrains.kotlin.android",version.ref = "kotlin"}
+realm-kotlin = {id = "io.realm.kotlin",version.ref = "realm"}
+google-secrets = {id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin",version.ref = "secretaGradlePlugin"}
